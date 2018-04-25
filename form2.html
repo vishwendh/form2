@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ </head>
+    
+    <body>
+        
+        <div class="container"><br>
+            <h1 class="text-sucess text-center">Form</h1><br>                           
+            <div class="col-lg-8 m-auto d-block">
+                
+                <form action="#" onsubmit="return validation()" class="bg-light">
+                
+                    <div class="form-group">
+                    <label> Username:</label>
+                        <input type="text" name="user" class="form-control" id="username">
+                        <span id="username" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                    <label> Password:</label>
+                        <input type="password" name="password" class="form-control" id="password">
+                         <span id="password" class="text-danger font-weight-bold"></span>                       
+                    </div>
+                
+                
+                    <div class="form-group">
+                    <label> Confirm Password:</label>
+                        <input type="password" name="confirmpassword" class="form-control" id="confirmpassword">
+                        <span id="confirmpassword" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                    <label> Mobile No.:</label>
+                        <input type="number" name="Mobile no" class="form-control" id="mobno">
+                        <span id="mobno" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                    <label> Email:</label>
+                        <input type="text" name="email" class="form-control" id="email">
+                        <span id="email" class="text-danger font-weight-bold"></span>
+
+                    </div>
+                    
+                    
+                    <input type="submit" value="submit" name="submit" class="btn btn-success">
+                    
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function.validation(){
+                
+    var user=Document.getElementById('username').value
+     var password=Document.getElementById('password').value  
+     var confirmpassword=Document.getElementById('confirmpassword').value
+     var mobile no=Document.getElementById('mobno').value  
+    var email=Document.getElementById('email').value
+     
+                
+        
+        if(user == ""){
+            Document.getElementById('username').innerHTML="** Above feild is required"
+            
+            return false;
+        }
+            if((user.length <= 2) || (user.length > 20)){
+                 Document.getElementById('username').innerHTML="** Above feild must be between 2 and 20 characters"
+            
+            return false;
+            }
+                if(!isNaN(user)){
+                     Document.getElementById('username').innerHTML="** No Numbers are Allowed"
+            
+            return false;
+            
+                }
+ 
+                
+        if(pass == ""){
+            Document.getElementById('password').innerHTML="** Above feild is required"
+            
+            return false;
+            
+        }
+                 if((pass.length <= 8) || (user.length > 20)){
+                 Document.getElementById('username').innerHTML="** Above feild must be between 8 and 20 characters"
+            
+            return false;
+            }
+                if(pass!=confirmpassword){
+                 Document.getElementById('username').innerHTML="** passwords are not matching"
+            
+            return false;
+            }          
+                
+        if(confirmpassword == ""){
+            Document.getElementById('confirmpassword').innerHTML="** Above feild is required"
+            
+            return false;
+            
+        }
+                
+        if(mobile == ""){
+            Document.getElementById('mobno').innerHTML="** Above feild is required"
+            
+            return false;
+            
+        }
+                
+        if(user == ""){
+            Document.getElementById('email').innerHTML="** Above feild is required"
+            
+            return false;
+            
+        }
+                                
+
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+        
+        </script>
+    </body>
+
+</html>
